@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom text colors on dark bg */
+.text-on-dark { color: #FFFFFF; }
+.text-light-on-dark { color: #E0E0E0; }
+
+/* Bullets highlight */
+.list-highlight-color { color: #0bda5e; }
+
+/* Ensure strong is bold */
+strong { font-weight: 700; }
+
+/* Inter font family */
+.font-inter { font-family: 'Inter', sans-serif; }
