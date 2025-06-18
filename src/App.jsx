@@ -287,20 +287,20 @@ const App = () => {
             }
           }
           .hero-headline {
-              font-size: 2.25rem; /* text-4xl */
+              font-size: 5rem; /* Increased from 2.25rem */
               line-height: 2.5rem; /* leading-10 */
               font-weight: 800; /* font-extrabold */
               margin-bottom: 1.5rem; /* mb-6 */
           }
           @media (min-width: 768px) { /* md */
             .hero-headline {
-                font-size: 3.75rem; /* md:text-6xl */
+                font-size: 5rem; /* Increased from 3.75rem */
                 line-height: 1;
             }
           }
           @media (min-width: 1024px) { /* lg */
             .hero-headline {
-                font-size: 4.5rem; /* lg:text-7xl */
+                font-size: 5rem; /* lg:text-7xl */
             }
           }
           .hero-subheadline {
@@ -335,6 +335,15 @@ const App = () => {
               position: relative;
               overflow: hidden;
           }
+
+          .hero-cta-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(11, 218, 94, 0.4);
+  border-color:  rgba(20, 40, 20, 0.95);
+  background: rgba(11, 218, 94, 0.5);
+}
+
+          
           .hero-key-features-text {
               position: absolute;
               bottom: 2.5rem; /* bottom-10 */
@@ -426,7 +435,7 @@ const App = () => {
   border: 1px solid rgba(255, 68, 68, 0.3);
   border-radius: 12px;
   overflow: hidden;
-  padding: 1.75rem;
+  padding: 2.4rem;
   width: 100%;
   max-width: 18rem;
   box-shadow: 0 6px 20px rgba(255, 68, 68, 0.2);
@@ -453,7 +462,7 @@ const App = () => {
 .problem-card .card-title {
   margin: 0 0 0.5rem;
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #FF6B6B;
   text-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
@@ -462,7 +471,7 @@ const App = () => {
 /* Problem card description */
 .problem-card .card-desc {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #E0B0B0;
 }
@@ -474,7 +483,7 @@ const App = () => {
   border: 1px solid rgba(11, 218, 94, 0.3);
   border-radius: 12px;
   overflow: hidden;
-  padding: 1.75rem;
+  padding: 2.4rem;
   width: 100%;
   max-width: 18rem;
   box-shadow: 0 6px 20px rgba(11, 218, 94, 0.2);
@@ -501,7 +510,7 @@ const App = () => {
 .solution-card .card-title {
   margin: 0 0 0.5rem;
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #4ADE80;
   text-shadow: 0 0 10px rgba(11, 218, 94, 0.3);
@@ -510,7 +519,7 @@ const App = () => {
 /* Solution card description */
 .solution-card .card-desc {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #B0E0B0;
 }
@@ -695,40 +704,58 @@ const App = () => {
             text-align: center;
           }
           .cta-headline {
-            font-size: 2.25rem; /* text-4xl */
-            line-height: 2.5rem;
-            font-weight: 700; /* font-bold */
+            font-size: 3rem; /* text-5xl */
+            line-height: 1.1;
+            font-weight: 900; /* font-black */
             margin-bottom: 2rem; /* mb-8 */
+            color: #000000; /* black text */
+            text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
           }
           @media (min-width: 768px) { /* md */
             .cta-headline {
-                font-size: 3rem; /* md:text-5xl */
+                font-size: 4rem; /* md:text-6xl */
+            }
+          }
+          @media (min-width: 1024px) { /* lg */
+            .cta-headline {
+                font-size: 4rem; /* lg:text-8xl */
             }
           }
           .cta-subheadline {
-            font-size: 1.25rem; /* text-xl */
-            line-height: 1.75rem;
-            font-weight: 300; /* font-light */
+            font-size: 1rem; /* text-2xl */
+            line-height: 1.4;
+            font-weight: 400; /* font-normal */
             margin-bottom: 3rem; /* mb-12 */
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
           }
           @media (min-width: 768px) { /* md */
             .cta-subheadline {
-                font-size: 1.5rem; /* md:text-2xl */
+                font-size: 1rem; /* md:text-3xl */
+            }
+          }
+          @media (min-width: 1024px) { /* lg */
+            .cta-subheadline {
+                font-size: 1.8rem; /* lg:text-4xl */
             }
           }
           .cta-button {
               padding: 1.25rem 2.5rem; /* px-10 py-5 */
               border-radius: 0.5rem; /* rounded-lg */
-              background-color: ${colors.whiteText};
-              color: ${colors.greenPrimary};
+              background-color: #000000; /* black background */
+              color: ${colors.whiteText}; /* white text */
               font-size: 1.25rem; /* text-xl */
               font-weight: 700; /* font-bold */
               box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-2xl */
               display: inline-block;
+              text-decoration: none; /* no underline */
               transition: background-color 0.3s ease-out;
           }
           .cta-button:hover {
-              background-color: rgba(255,255,255,0.9); /* hover:bg-gray-100 */
+              background-color: rgba(0, 0, 0, 0.8); /* darker black on hover */
+              text-decoration: none; /* ensure no underline on hover */
           }
           .cta-small-text {
             margin-top: 2rem; /* mt-8 */
@@ -772,7 +799,7 @@ const App = () => {
             }
           }
           .footer-logo {
-              font-size: 1.5rem; /* text-2xl */
+              font-size: 2.5rem; /* text-2xl */
               font-weight: 800; /* font-extrabold */
               display: flex;
               align-items: center;
@@ -815,13 +842,12 @@ const App = () => {
         {/* Hero Content (left-aligned) */}
         <div className="hero-content">
             <div>
-                <h1 className="hero-headline animate-fade-in-up text-lift-hover hero-headline-gradient" style={heroHeadlineGradientStyle}>
-                    Veridian: <br/>Revolutionize <br/>Your Developer Flow.
+                <h1 className="hero-headline animate-fade-in-up text-lift-hover">
+                    <span className="hero-brand-name" style={{...heroHeadlineGradientStyle, fontSize: '8rem'}}>Veridian:</span>
+                    <br/>
+                    <span className="hero-main-headline" style={{...heroHeadlineGradientStyle, fontSize: '5.8rem'}}>Revolutionize Your Developer Flow.</span>
                 </h1>
-                <p className="hero-subheadline animate-fade-in delay-200">
-                    The ultimate productivity tool for developers, designed to
-                    streamline your workflow and help you build better software, faster.
-                </p>
+                <br/>
                 <div className="animate-fade-in delay-400">
                     <a href="#" className="hero-cta-button hero-cta">
                         Get Started for Free
@@ -839,7 +865,13 @@ const App = () => {
   <div ref={addScrollRevealRef} className="max-width-content">
     <h2
       className="section-heading animate-fade-in-up delay-200 text-lift-hover"
-      style={problemHeadingGradientStyle}
+      style={{
+        ...problemHeadingGradientStyle,
+        fontSize: '2.5rem',
+        lineHeight: '1.1',
+        fontWeight: '800',
+        marginBottom: '2rem'
+      }}
     >
       These Productivity Killers Are Destroying Your Flow
     </h2>
@@ -895,7 +927,13 @@ const App = () => {
 
 <section id="solution" className="section-padding" style={{ backgroundColor: colors.darkSecondaryBg }}>
   <div ref={addScrollRevealRef} className="max-width-content">
-    <h2 className="section-heading animate-fade-in-up delay-200 text-lift-hover" style={solutionHeadingGradientStyle}>
+    <h2 className="section-heading animate-fade-in-up delay-200 text-lift-hover" style={{
+        ...solutionHeadingGradientStyle,
+        fontSize: '2.5rem',
+        lineHeight: '1.1',
+        fontWeight: '800',
+        marginBottom: '2rem'
+      }}>
       The All-in-One Solution for Developer Productivity.
     </h2>
     <div className="section-content-wrapper">
@@ -969,16 +1007,16 @@ const App = () => {
       {/* Secondary Call to Action Section */}
       <section id="cta" className="section-padding cta-section" style={{ backgroundColor: colors.greenPrimary }}>
         <div ref={addScrollRevealRef} className="max-width-content">
-          <h2 className="section-heading animate-fade-in-up delay-200">
+          <h2 className="cta-headline animate-fade-in-up delay-200">
             Unlock Your Potential.
           </h2>
-          <p className="text-xl md:text-2xl font-light mb-12 animate-fade-in delay-400">
+          <p className="cta-subheadline animate-fade-in delay-400">
             Join Veridian today and bring unparalleled clarity to your projects and goals.
           </p>
-          <a href="#" className="px-10 py-5 rounded-lg bg-white text-green-500 text-xl font-bold shadow-2xl hover:bg-gray-100 transition-all duration-300 relative overflow-hidden hero-cta animate-fade-in delay-600">
+          <a href="#" className="cta-button animate-fade-in delay-600">
             Sign Up Now
           </a>
-          <p className="mt-8 text-sm opacity-80 animate-fade-in delay-800">No credit card required. Free forever plan available.</p>
+          <p className="cta-small-text animate-fade-in delay-800">No credit card required. Free forever plan available.</p>
         </div>
       </section>
 
